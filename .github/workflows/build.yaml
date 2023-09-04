@@ -19,7 +19,7 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download dependencies
         run: go mod download
@@ -48,7 +48,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download dependencies
         run: npm --prefix ./axolotl-web ci --loglevel verbose
@@ -83,7 +83,7 @@ jobs:
           toolchain: stable
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'true'
 
@@ -116,7 +116,7 @@ jobs:
           sudo apt install -y gcc-aarch64-linux-gnu
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download dependencies
         run: go mod download
@@ -142,7 +142,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create folder
         run: mkdir --parents $GITHUB_WORKSPACE/build/linux-arm64/axolotl-web
@@ -182,7 +182,7 @@ jobs:
           cargo install cross
 
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'true'
 
